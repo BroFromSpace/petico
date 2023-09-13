@@ -23,6 +23,5 @@ logs
 .env.*
 !.env.example
 
-HTMLFiles
-
-!.stylelintrc.js
+assets/js/script.js
+*.min.js

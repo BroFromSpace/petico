@@ -3,11 +3,13 @@ module.exports = {
 		browser: true,
 		node: true,
 		es2021: true,
+		'vue/setup-compiler-macros': true,
 	},
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:vue/vue3-essential',
+		'@nuxtjs/eslint-config-typescript',
 	],
 	overrides: [
 		{
@@ -16,7 +18,6 @@ module.exports = {
 			},
 			files: [
 				'.eslintrc.{js,cjs}',
-				'.stylelintrc.{js,cjs}',
 			],
 			parserOptions: {
 				sourceType: 'script',
@@ -43,9 +44,12 @@ module.exports = {
 			exports: 'never',
 			functions: 'never',
 		}, ],
+		'no-tabs': 'off',
 		'object-curly-spacing': [ 'error', 'always', ],
 		'array-bracket-spacing': [ 'error', 'always', ],
 		'computed-property-spacing': [ 'error', 'always', ],
+		'vue/html-indent': [ 'error', 'tab', ],
 		'vue/multi-word-component-names': [ 'off', ],
+		'vue/component-name-in-template-casing': [ 'error', 'PascalCase', ],
 	},
 };

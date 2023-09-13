@@ -1,0 +1,212 @@
+/*
+*
+* Backgrounds
+*/
+
+
+%context-dark {
+	&,
+	#{headings()} {
+		color: $white;
+	}
+
+	p a {
+		color: inherit;
+	}
+
+	.big {
+		color: $white;
+	}
+	
+	// Logo
+	.brand {
+		.brand-logo-dark { display: none; }
+		.brand-logo-light { display: block; }
+	}
+
+	// Buttons
+	.button-primary {
+		&:hover {
+			background: $primary-lighten;
+			border-color: $primary-lighten;
+		}
+	}
+
+	.form-input {
+		border-color: $white;
+	}
+}
+
+%context-light {
+	color: $body-color;
+
+	#{headings()} {
+		color: $headings-color;
+	}
+
+	// Logo
+	.brand {
+		.brand-logo-dark { display: block; }
+		.brand-logo-light { display: none; }
+	}
+}
+
+/**
+* Light Backgrounds
+*/
+.bg-gray-100 {
+	@include bg-behaviour($gray-100);
+}
+
+.bg-gray-200 {
+	@include bg-behaviour($gray-200);
+}
+
+/**
+* Dark Backgrounds
+*/
+.context-dark {
+	@extend %context-dark;
+}
+
+.bg-gray-700 {
+	color: $gray-300;
+	@extend %context-dark;
+	@include bg-behaviour($gray-700);
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $white;
+		}
+	}
+
+	p a {
+		&:hover {
+			color: $white;
+		}
+	}
+}
+ 
+.bg-gray-800 {
+	@include bg-behaviour($gray-800);
+}
+
+.bg-gray-light{
+	@include bg-behaviour($gray-light);
+}
+
+.bg-primary-darken{
+	@include bg-behaviour($primary-darken);
+}
+
+
+
+/** 
+* Accent Backgrounds
+*/
+.bg-primary {
+	@extend %context-dark;
+	@include bg-behaviour($primary);
+}
+
+.bg-primary-darker {
+	@extend %context-dark;
+	@include bg-behaviour($primary-darken);
+}
+
+.bg-primary-darker-2 {
+	@include bg-behaviour($primary-darken);
+}
+
+.bg-gray-dark{
+	@include bg-behaviour($gray-dark);
+	&.footer-advanced{
+		h4{
+			color: $white;
+		}
+	}
+}
+
+/**
+* Background Image
+*/
+.bg-image { }
+
+[class*='bg-'] {
+	background-size: cover;
+	background-position: center center;
+}
+
+.bg-image-light {
+
+	@include media-breakpoint-down(lg) {
+		position: relative;
+		
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba($white, .1);
+		}
+	}
+}
+
+.bg-image-1 {
+	position: relative;
+	background: url('../images/bg-image-1.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+
+.bg-image-2 {
+	position: relative;
+	background-color: $gray-light;
+	@include media-breakpoint-up(xl) {
+		background: url('../images/bg-image-2.jpg') no-repeat;
+		background-position: right;
+		background-size: cover;
+	}
+}
+
+.bg-image-3 {
+	position: relative;
+	background-color: $gray-light;
+	@include media-breakpoint-up(xl) {
+		background: url('../images/bg-image-3.jpg') no-repeat;
+		background-position: right;
+		background-size: cover;
+	}
+}
+
+// Desktop only
+//
+html:not(.tablet):not(.mobile) {
+	.bg-fixed {
+		@include media-breakpoint-up(lg) {
+			background-attachment: fixed;
+		}
+	}
+}
+
+
+.coming-soon-bg{
+	@include media-breakpoint-up(lg) {
+		background: url('../images/coming-soon-bg.jpg') no-repeat;
+		background-size: 36%;
+		background-position: 90% 50%;
+	}
+	@include media-breakpoint-up(xl) {
+		background-size: 36%;
+		background-position: 90% 50%;
+	}
+	@include media-breakpoint-up(xxl) {
+		background-size: 33%;
+		background-position: 82% 23%;
+	}
+}
