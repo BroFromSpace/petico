@@ -34,8 +34,9 @@ type ModifyModelValue = (event: Event) => void;
 const hasFocus = ref<boolean>(false);
 const isAutoFilled = ref<boolean>(false);
 
-const { inputId, inputType, inputName, inputLabel, } = definePropsRefs<Props>();
 defineEmits<{ 'update:modelValue': [value: string] }>();
+
+const { inputId, inputType, inputName, inputLabel, } = definePropsRefs<Props>();
 const { modelValue, } = defineModels<{ modelValue: string }>();
 
 const changeFocus: ChangeFocus = (value) => {
