@@ -4,6 +4,8 @@ export default defineNuxtConfig({
 		'@nuxt/image',
 		'@nuxtjs/eslint-module',
 		'@vue-macros/nuxt',
+		'@nuxtjs/html-validator',
+		'magic-regexp/nuxt',
 	],
 	devtools: { enabled: true, },
 	app: {
