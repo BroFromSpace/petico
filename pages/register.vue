@@ -21,7 +21,7 @@
 					</h4>
 					<form class="rd-form rd-form-small">
 						<FormInputField
-							v-model="formData.email"
+							v-model.trim="formData.email"
 							input-id="register-email"
 							input-type="email"
 							input-name="email"
@@ -30,7 +30,7 @@
 							:v="v$.email"
 						/>
 						<FormInputField
-							v-model="formData.password"
+							v-model.trim="formData.password"
 							input-id="register-password"
 							input-type="password"
 							input-name="password"
@@ -39,7 +39,7 @@
 							:v="v$.password"
 						/>
 						<FormInputField
-							v-model="formData.passwordConfirm"
+							v-model.trim="formData.passwordConfirm"
 							input-id="register-password-2"
 							input-type="password"
 							input-name="password-2"
@@ -50,7 +50,9 @@
 						<div class="form-wrap">
 							<button class="button button-block button-primary button-winona" type="submit">
 								<WinonaContent>
-									Create an Account
+									<template #content>
+										Create an Account
+									</template>
 								</WinonaContent>
 							</button>
 						</div>
@@ -63,17 +65,23 @@
 							<div class="button-group">
 								<a class="button button-facebook button-icon button-icon-only button-winona" href="#" aria-label="Facebook">
 									<WinonaContent>
-										<span class="icon mdi mdi mdi-facebook" />
+										<template #content>
+											<span class="icon mdi mdi mdi-facebook" />
+										</template>
 									</WinonaContent>
 								</a>
 								<a class="button button-twitter button-icon button-icon-only button-winona" href="#" aria-label="Twitter">
 									<WinonaContent>
-										<span class="icon mdi mdi-twitter" />
+										<template #content>
+											<span class="icon mdi mdi-twitter" />
+										</template>
 									</WinonaContent>
 								</a>
 								<a class="button button-google button-icon button-icon-only button-winona" href="#" aria-label="Google+">
 									<WinonaContent>
-										<span class="icon mdi mdi-google" />
+										<template #content>
+											<span class="icon mdi mdi-google" />
+										</template>
 									</WinonaContent>
 								</a>
 							</div>
@@ -87,7 +95,8 @@
 
 <script setup lang="ts">
 import { useVuelidate } from '@vuelidate/core';
-import { required, email, sameAs, minLength, helpers } from '@vuelidate/validators';
+import { createRegExp, oneOrMore, anyOf, wordChar, exactly, not } from 'magic-regexp';
+import { required, email, sameAs, minLength, maxLength, helpers } from '@vuelidate/validators';
 
 interface FormData {
 	email: string,
@@ -116,6 +125,17 @@ const formData: FormData = reactive({
 	passwordConfirm: '',
 });
 
+const validPasswordRegEx = createRegExp(
+	oneOrMore(wordChar)
+		.and(exactly(not.digit))
+		.and(
+			anyOf('~', '`', '!', '@', '#', '$', '%', '^', '&', '(', ')', '_', '-', '+', '=', '{', '[', ']', '}', '|', '\\', ':', ';', '"', '\'', '<', ',', '>', '.', '?', '/')
+				.optionally()
+		).and(
+			anyOf(not.whitespace)
+		).at.lineStart()
+);
+
 const rules = computed<ValidationRules>(() => {
 	return {
 		email: {
@@ -124,7 +144,9 @@ const rules = computed<ValidationRules>(() => {
 		},
 		password: {
 			required: helpers.withMessage('Password is required', required),
-			minLength: helpers.withMessage('Password too short', minLength(8)),
+			minLength: helpers.withMessage('Password is too short', minLength(8)),
+			maxLength: helpers.withMessage('Password is too long', maxLength(64)),
+			valid: helpers.withMessage('Password is too weak', helpers.regex(validPasswordRegEx)),
 		},
 		passwordConfirm: {
 			required: helpers.withMessage('Password confirmation is required', required),
