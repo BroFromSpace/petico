@@ -1,6 +1,5 @@
 <template>
-	<!-- Registration form-->
-	<div class="section-sm section-last pb-0">
+	<div class="section-sm">
 		<div class="container">
 			<h6>Registration form</h6>
 		</div>
