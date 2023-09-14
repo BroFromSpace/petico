@@ -1,11 +1,13 @@
 <template>
 	<span ref="contentWrap">
-		<slot />
+		<slot name="content" />
 	</span>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+defineSlots<{
+	content(): any
+}>();
 
 const contentWrap = ref<HTMLElement | null>(null);
 
@@ -17,12 +19,12 @@ onMounted(() => {
 		const dubbedDiv = document.createElement('div');
 		dubbedDiv.className = 'content-dubbed';
 
-		contentWrap.value.childNodes.forEach((node) => {
+		contentWrap.value.childNodes.forEach((node: ChildNode) => {
 			originalDiv.appendChild(node.cloneNode(true));
 			dubbedDiv.appendChild(node.cloneNode(true));
 		});
 
-		contentWrap.value?.replaceWith(originalDiv, dubbedDiv);
+		contentWrap.value.replaceWith(originalDiv, dubbedDiv);
 	}
 });
 </script>
