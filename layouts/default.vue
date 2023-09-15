@@ -1,6 +1,9 @@
 <template>
-	<div>
+	<div class="page">
+		<NavigationBar />
+		<UIToTopButton />
 		<slot />
+		<PageFooter />
 	</div>
 </template>
 
