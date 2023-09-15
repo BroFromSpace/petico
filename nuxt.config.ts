@@ -19,6 +19,9 @@ export default defineNuxtConfig({
 	css: [
 		'~/assets/scss/custom/style.scss',
 	],
+	plugins: [
+		{ src: '~/plugins/bootstrap.ts', mode: 'client', },
+	],
 	image: {
 		dir: 'assets/images',
 		quality: 100,
