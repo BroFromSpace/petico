@@ -14,7 +14,7 @@
 				{{ v.$errors[0].$message }}
 			</span>
 		</Transition>
-		<label class="form-label" :class="{'focus': hasFocus, 'auto-fill': isAutoFilled, 'not-empty': !!modelValue}" :for="inputId">{{ inputLabel }}</label>
+		<label class="form-label" :class="{focus: hasFocus, 'auto-fill': autoFilled, 'not-empty': !!modelValue}" :for="inputId">{{ inputLabel }}</label>
 	</div>
 </template>
 
@@ -31,8 +31,8 @@ interface Props {
 type ChangeFocus = (value: boolean) => void;
 type ModifyModelValue = (event: Event) => void;
 
-const hasFocus = ref<boolean>(false);
-const isAutoFilled = ref<boolean>(false);
+const hasFocus = ref(false);
+const autoFilled = ref(false);
 
 defineEmits<{ 'update:modelValue': [value: string] }>();
 
@@ -46,7 +46,7 @@ const changeFocus: ChangeFocus = (value) => {
 const modifyModelValue: ModifyModelValue = (event) => {
 	modelValue.value = (event.target as HTMLInputElement).value;
 
-	isAutoFilled.value = window.getComputedStyle(event.target as HTMLInputElement, ':-webkit-autofill').length > 0;
+	autoFilled.value = window.getComputedStyle(event.target as HTMLInputElement, ':-webkit-autofill').length > 0;
 };
 </script>
 
