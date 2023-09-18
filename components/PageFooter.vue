@@ -6,6 +6,7 @@
 					<div class="col-lg-4">
 						<h4>About Us</h4>
 						<p class="footer-advanced-text">
+							<!-- eslint-disable-next-line vue/max-len -->
 							SpaDog is the nation’s leading grooming studio with multiple salons located throughout the USA. Since our establishment in 1999, we have been providing quality dog grooming, bathing, and care services to make dogs happy &amp; clean. We care for pets as for the members of our family and not just dogs.
 						</p>
 					</div>
@@ -13,6 +14,7 @@
 						<h4>Recent Blog Posts</h4>
 						<article class="post-inline">
 							<p class="post-inline-title">
+								<!-- eslint-disable-next-line vue/max-len -->
 								<a href="single-blog-post.html">The Ultimate Dog Grooming Guide: How To Groom 6 Different Types Of Dog Coat</a>
 							</p>
 							<ul class="post-inline-meta">
@@ -177,6 +179,7 @@
 						<NuxtImg src="logo-inverse-334x88.png" alt="" width="167" height="44" loading="lazy" />
 					</a>
 					<p class="rights">
+						<!-- eslint-disable-next-line vue/max-len -->
 						<span>&copy;&nbsp;</span><span class="copyright-year" /><span>&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><br class="d-sm-none"><a href="privacy-policy.html">Privacy Policy</a>
 					</p>
 				</div>
