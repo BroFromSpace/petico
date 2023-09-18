@@ -23,6 +23,9 @@ $breadcrumb-separator: "\f105";
 		left: 0;
 		background: rgba($white,.8)
 	}
+	&.bg-image {
+		background-image: url('~/assets/images/breadcrumbs-bg.jpg');
+	}
 	@include media-breakpoint-up(xl) {
 	 &:before{
 		 display: none;
@@ -48,7 +51,7 @@ $breadcrumb-separator: "\f105";
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
+
   &::before {
     content: '';
     display: block;
@@ -56,7 +59,7 @@ $breadcrumb-separator: "\f105";
 }
 
 .breadcrumbs-custom-main {
-	
+
 }
 
 .breadcrumbs-custom-path {
@@ -97,7 +100,7 @@ $breadcrumb-separator: "\f105";
 			color: $breadcrumb-color;
 		}
 	}
- 
+
 	a:hover {
 		color: $deep-blue;
 	}
@@ -109,7 +112,7 @@ $breadcrumb-separator: "\f105";
 .breadcrumbs-custom-subtitle + .breadcrumbs-custom-title { margin-top: 15px; }
 
 @include media-breakpoint-up(sm) {
-	
+
 	.breadcrumbs-custom-path {
 		@include spacingX(60px);
 	}
@@ -121,7 +124,7 @@ $breadcrumb-separator: "\f105";
 	.breadcrumbs-custom {
 		min-height: (456 / 1920) * 100vw;
 	}
-	
+
 	.breadcrumbs-custom-inner {
 		padding: 80px 0 30px;
 	}
