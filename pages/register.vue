@@ -1,94 +1,119 @@
 <template>
-	<div class="section-sm">
-		<div class="container">
-			<h6>Registration form</h6>
-		</div>
-		<section class="section section-md bg-primary-darker-2 section-decorated-16">
-			<div class="decor-1">
-				<NuxtImg src="bubbles-187x131.png" alt="" width="187" height="131" loading="lazy" />
-			</div>
-			<div class="decor-2">
-				<NuxtImg src="bubbles-295x474.png" alt="" width="295" height="474" loading="lazy" />
-			</div>
-			<div class="decor-3">
-				<NuxtImg src="forms-img-1-465x584.png" alt="" width="465" height="584" loading="lazy" />
-			</div>
+	<div>
+		<BreadcrumbContainer>
+			<template #title>
+				Register
+			</template>
+			<template #path>
+				<BreadcrumbItem>
+					<NuxtLink to="/">
+						Home
+					</NuxtLink>
+				</BreadcrumbItem>
+				<BreadcrumbItem active>
+					Register
+				</BreadcrumbItem>
+			</template>
+		</BreadcrumbContainer>
+
+		<div class="section-sm">
 			<div class="container">
-				<div class="box-1">
-					<h4 class="text-white">
-						Registration
-					</h4>
-					<form class="rd-form rd-form-small">
-						<FormInputField
-							v-model.trim="formData.email"
-							input-id="register-email"
-							input-type="email"
-							input-name="email"
-							input-label="Email"
-							required
-							:v="v$.email"
-						/>
-						<FormInputField
-							v-model.trim="formData.password"
-							input-id="register-password"
-							input-type="password"
-							input-name="password"
-							input-label="Password"
-							required
-							:v="v$.password"
-						/>
-						<FormInputField
-							v-model.trim="formData.passwordConfirm"
-							input-id="register-password-2"
-							input-type="password"
-							input-name="password-2"
-							input-label="Confirm Password"
-							required
-							:v="v$.passwordConfirm"
-						/>
-						<div class="form-wrap">
-							<button class="button button-block button-primary button-winona" type="submit">
-								<WinonaContent>
-									<template #content>
-										Create an Account
-									</template>
-								</WinonaContent>
-							</button>
-						</div>
-						<div class="form-wrap">
-							<div class="text-decoration-lines">
-								<span class="text-decoration-lines-content text-white">or enter with</span>
-							</div>
-						</div>
-						<div class="form-wrap">
-							<div class="button-group">
-								<a class="button button-facebook button-icon button-icon-only button-winona" href="#" aria-label="Facebook">
-									<WinonaContent>
-										<template #content>
-											<span class="icon mdi mdi mdi-facebook" />
-										</template>
-									</WinonaContent>
-								</a>
-								<a class="button button-twitter button-icon button-icon-only button-winona" href="#" aria-label="Twitter">
-									<WinonaContent>
-										<template #content>
-											<span class="icon mdi mdi-twitter" />
-										</template>
-									</WinonaContent>
-								</a>
-								<a class="button button-google button-icon button-icon-only button-winona" href="#" aria-label="Google+">
-									<WinonaContent>
-										<template #content>
-											<span class="icon mdi mdi-google" />
-										</template>
-									</WinonaContent>
-								</a>
-							</div>
-						</div>
-					</form>
-				</div>
+				<h6>Registration form</h6>
 			</div>
-		</section>
+			<section class="section section-md bg-primary-darker-2 section-decorated-16">
+				<div class="decor-1">
+					<NuxtImg src="bubbles-187x131.png" alt="" width="187" height="131" loading="lazy" />
+				</div>
+				<div class="decor-2">
+					<NuxtImg src="bubbles-295x474.png" alt="" width="295" height="474" loading="lazy" />
+				</div>
+				<div class="decor-3">
+					<NuxtImg src="forms-img-1-465x584.png" alt="" width="465" height="584" loading="lazy" />
+				</div>
+				<div class="container">
+					<div class="box-1">
+						<h4 class="text-white">
+							Registration
+						</h4>
+						<form class="rd-form rd-form-small">
+							<FormInputField
+								v-model.trim="formData.email"
+								input-id="register-email"
+								input-type="email"
+								input-name="email"
+								required
+								:v="v$.email"
+							>
+								Email
+							</FormInputField>
+							<FormInputField
+								v-model.trim="formData.password"
+								input-id="register-password"
+								input-type="password"
+								input-name="password"
+								required
+								:v="v$.password"
+							>
+								Password
+							</FormInputField>
+							<FormInputField
+								v-model.trim="formData.passwordConfirm"
+								input-id="register-password-2"
+								input-type="password"
+								input-name="password-2"
+								required
+								:v="v$.passwordConfirm"
+							>
+								Confirm Password
+							</FormInputField>
+							<div class="form-wrap">
+								<button class="button button-block button-primary button-winona" type="submit">
+									<WinonaContent>
+										Create an Account
+									</WinonaContent>
+								</button>
+							</div>
+							<div class="form-wrap">
+								<div class="text-decoration-lines">
+									<span class="text-decoration-lines-content text-white">or enter with</span>
+								</div>
+							</div>
+							<div class="form-wrap">
+								<div class="button-group">
+									<a
+										class="button button-facebook button-icon button-icon-only button-winona"
+										href="#"
+										aria-label="Facebook"
+									>
+										<WinonaContent>
+											<span class="icon mdi mdi mdi-facebook" />
+										</WinonaContent>
+									</a>
+									<a
+										class="button button-twitter button-icon button-icon-only button-winona"
+										href="#"
+										aria-label="Twitter"
+									>
+										<WinonaContent>
+											<span class="icon mdi mdi-twitter" />
+										</WinonaContent>
+									</a>
+									<a
+										class="button button-google button-icon button-icon-only button-winona"
+										href="#"
+										aria-label="Google+"
+									>
+										<WinonaContent>
+											<span class="icon mdi mdi-google" />
+										</WinonaContent>
+									</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
 	</div>
 </template>
 
@@ -128,8 +153,12 @@ const validPasswordRegEx = createRegExp(
 	oneOrMore(wordChar)
 		.and(exactly(not.digit))
 		.and(
-			anyOf('~', '`', '!', '@', '#', '$', '%', '^', '&', '(', ')', '_', '-', '+', '=', '{', '[', ']', '}', '|', '\\', ':', ';', '"', '\'', '<', ',', '>', '.', '?', '/')
-				.optionally()
+			anyOf(
+				'~', '`', '!', '@', '#', '$', '%', '^', '&',
+				'(', ')', '_', '-', '+', '=', '{', '[', ']',
+				'}', '|', '\\', ':', ';', '"', '\'', '<', ',',
+				'>', '.', '?', '/'
+			).optionally()
 		).and(
 			anyOf(not.whitespace)
 		).at.lineStart()
