@@ -1,8 +1,15 @@
 <template>
 	<div class="page">
-		<NavigationBar />
+		<!-- Navigation Bar -->
+		<PageNavBar />
+
+		<!-- Scroll to Top Button -->
 		<UIToTopButton />
+
+		<!-- Current Page -->
 		<slot />
+
+		<!-- Footer -->
 		<PageFooter />
 	</div>
 </template>
