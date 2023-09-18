@@ -1,15 +1,13 @@
 <template>
 	<span ref="contentWrap">
-		<slot name="content" />
+		<slot />
 	</span>
 </template>
 
 <script setup lang="ts">
-defineSlots<{
-	content(): any
-}>();
-
 const contentWrap = ref<HTMLElement | null>(null);
+
+defineSlots<{default(): any}>();
 
 onMounted(() => {
 	if (contentWrap.value) {
