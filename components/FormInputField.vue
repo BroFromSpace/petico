@@ -14,7 +14,13 @@
 				{{ v.$errors[0].$message }}
 			</span>
 		</Transition>
-		<label class="form-label" :class="{focus: hasFocus, 'auto-fill': autoFilled, 'not-empty': !!modelValue}" :for="inputId">{{ inputLabel }}</label>
+		<label
+			class="form-label"
+			:class="{focus: hasFocus, 'auto-fill': autoFilled, 'not-empty': !!modelValue}"
+			:for="inputId"
+		>
+			<slot />
+		</label>
 	</div>
 </template>
 
@@ -23,7 +29,6 @@ interface Props {
 	inputId: string,
 	inputType: string,
 	inputName: string,
-	inputLabel: string,
 	required?: boolean,
 	v: Readonly<{ [key: string]: any }>,
 }
@@ -35,8 +40,9 @@ const hasFocus = ref(false);
 const autoFilled = ref(false);
 
 defineEmits<{ 'update:modelValue': [value: string] }>();
+defineSlots<{default(): any}>();
 
-const { inputId, inputType, inputName, inputLabel, } = definePropsRefs<Props>();
+const { inputId, inputType, inputName, } = definePropsRefs<Props>();
 const { modelValue, } = defineModels<{ modelValue: string }>();
 
 const changeFocus: ChangeFocus = (value) => {
