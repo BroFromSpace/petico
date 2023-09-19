@@ -17,7 +17,7 @@
 	.big {
 		color: $white;
 	}
-	
+
 	// Logo
 	.brand {
 		.brand-logo-dark { display: none; }
@@ -88,7 +88,7 @@
 		}
 	}
 }
- 
+
 .bg-gray-800 {
 	@include bg-behaviour($gray-800);
 }
@@ -103,7 +103,7 @@
 
 
 
-/** 
+/**
 * Accent Backgrounds
 */
 .bg-primary {
@@ -143,7 +143,7 @@
 
 	@include media-breakpoint-down(lg) {
 		position: relative;
-		
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -158,7 +158,7 @@
 
 .bg-image-1 {
 	position: relative;
-	background: url('../images/bg-image-1.jpg') no-repeat;
+	background: url('/assets/images/bg-image-1.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
