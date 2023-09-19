@@ -13,10 +13,10 @@
 	/* Fix of Webkit flickering */
 	z-index: 1;
 	pointer-events: none;
-	
+
 	&, * {
 		backface-visibility: hidden;
-		
+
 	}
 }
 .swiper-container-no-flexbox .swiper-slide {
@@ -50,7 +50,7 @@
 }
 .swiper-slide {
 	flex-shrink: 0;
-	width: 100%; 
+	width: 100%;
 	height: 100%;
 	position: relative;
 	background-size: cover;
@@ -86,7 +86,7 @@
 	.swiper-cube-shadow {
 		transform-style: preserve-3d;
 	}
-	
+
 	.swiper-slide-shadow-left,
 	.swiper-slide-shadow-right,
 	.swiper-slide-shadow-top,
@@ -99,19 +99,19 @@
 		pointer-events: none;
 		z-index: 10;
 	}
-	
+
 	.swiper-slide-shadow-left {
 		background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 	}
-	
+
 	.swiper-slide-shadow-right {
 		background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 	}
-	
+
 	.swiper-slide-shadow-top {
 		background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 	}
-	
+
 	.swiper-slide-shadow-bottom {
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 	}
@@ -404,11 +404,11 @@ button.swiper-pagination-bullet {
 		pointer-events: none;
 		transition-property: opacity;
 	}
-	
+
 	.swiper-slide .swiper-slide {
 		pointer-events: none;
 	}
-	
+
 	.swiper-slide-active,
 	.swiper-slide-active .swiper-slide-active {
 		pointer-events: auto;
@@ -457,7 +457,7 @@ button.swiper-pagination-bullet {
 	width: 100%;
 	height: 100%;
 	background: #000;
-	opacity: 0.6; 
+	opacity: 0.6;
 	filter: blur(50px);
 	z-index: 0;
 }
@@ -633,7 +633,7 @@ button.swiper-pagination-bullet {
 	z-index: 20;
 	bottom: 30px;
 	pointer-events: none;
-	
+
 	.swiper-pagination {
 		pointer-events: auto;
 	}
@@ -648,14 +648,14 @@ button.swiper-pagination-bullet {
 	right: auto;
 	left: auto;
 	margin-left: -$pagination-spacing;
-	
+
 	.swiper-pagination-bullet,
 	.swiper-pagination-mark {
 		width: $pagination-dot-size;
 		height: $pagination-dot-size;
 		border-radius: 50%;
 	}
-	
+
 	.swiper-pagination-bullet {
 		display: inline-flex;
 		justify-content: center;
@@ -668,7 +668,7 @@ button.swiper-pagination-bullet {
 		line-height: $pagination-dot-size;
 		margin: 0 $pagination-spacing;
 	}
-	
+
 	.swiper-pagination-mark {
 		position: absolute;
 		top: 0;
@@ -683,11 +683,11 @@ button.swiper-pagination-bullet {
 	.swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover {
 		background: $primary;
 	}
-	
+
 	.swiper-pagination-bullet-active {
 		color: $deep-blue;
 	}
-	
+
 	@for $i from 1 through 12 {
 		.swiper-pagination-bullet-active:nth-child(#{$i}) {
 			~ .swiper-pagination-mark {
@@ -720,11 +720,11 @@ button.swiper-pagination-bullet {
 		width: 100%;
 		white-space: normal;
 	}
-	
+
 	.container {
 		width: 100%;
 	}
-	
+
 }
 
 //
@@ -767,7 +767,7 @@ button.swiper-pagination-bullet {
 	}
 	.swiper-slide-caption {
 		z-index: 1;
-		
+
 	}
 	#{headings()} {
 		span {
@@ -787,9 +787,9 @@ button.swiper-pagination-bullet {
 		}
 		.slider-slide-caption {
 			padding: 45px 0 95px;
-			
+
 		}
-	} 
+	}
 }
 
 
@@ -797,14 +797,14 @@ button.swiper-pagination-bullet {
 	.swiper-slider-light {
 		.swiper-slide {
 			background-position: center center;
-			
+
 			&::before {
 				display: none;
 			}
 		}
-		
+
 		.swiper-slide-caption {
-			//padding: 80px 0 165px;
+			padding: 80px 0 165px;
 		}
 
 		.swiper-pagination-outer {
@@ -815,12 +815,12 @@ button.swiper-pagination-bullet {
 
 @include media-breakpoint-up(xl) {
   .swiper-slider-light {
-	 
+
 		.swiper-pagination-outer {
 			bottom: 72px;
 		}
-	} 
-} 
+	}
+}
 
 //
 // Slider 2
@@ -830,7 +830,7 @@ button.swiper-pagination-bullet {
 
 	.swiper-slide {
 		background-position: 60% 50%;
-		
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -857,7 +857,7 @@ button.swiper-pagination-bullet {
 		overflow: hidden;
 		max-width: 520px;
 		padding-left: 35px;
-		
+
 		p {
 			width: 100%;
 		}
@@ -878,7 +878,7 @@ button.swiper-pagination-bullet {
 		bottom: 0;
 		left: 0;
 		width: 2px;
-		background: $primary; 
+		background: $primary;
 	}
 
 	.swiper-slider-nav {
@@ -890,20 +890,20 @@ button.swiper-pagination-bullet {
 		transform: translate3d(-50%, 0, 0);
 		pointer-events: none;
 		text-align: left;
-		
+
 		> * + * {
 			margin-left: 10px;
 		}
 	}
-	
+
 	.wow-outer {
 		white-space: normal;
-		
+
 		span {
 			display: inline-block;
 		}
 	}
-	
+
 	.swiper-button-prev,
 	.swiper-button-next {
 		position: relative;
@@ -916,15 +916,15 @@ button.swiper-pagination-bullet {
 	}
 
 	* + .swiper-caption-text { margin-top: 20px; }
-	
+
 }
 
 @include media-breakpoint-up(md) {
-  .swiper-slider-business { 
-		.swiper-slide-caption { 
+  .swiper-slider-business {
+		.swiper-slide-caption {
 			padding: 130px 0 180px;
-		} 
-	} 
+		}
+	}
 }
 
 @include media-breakpoint-up(lg) {
@@ -932,7 +932,7 @@ button.swiper-pagination-bullet {
 		.swiper-slider-nav {
 			bottom: 40px;
 		}
-	} 
+	}
 }
 
 @include media-breakpoint-up(xl) {
@@ -947,7 +947,7 @@ button.swiper-pagination-bullet {
 	.swiper-slider-business {
 		* + .swiper-caption-text { margin-top: 45px; }
 	}
-} 
+}
 
 
 //
@@ -960,7 +960,7 @@ button.swiper-pagination-bullet {
 	.swiper-slide {
 		background-position: 50% 50%;
 		justify-content: center;
-		
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -988,7 +988,7 @@ button.swiper-pagination-bullet {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -1006,25 +1006,25 @@ button.swiper-pagination-bullet {
 		z-index: 2;
 		padding: 80px 0 120px;
 	}
-	
+
 	.swiper-slide-text {
 		position: relative;
 		overflow: hidden;
 		width: auto;
-		
+
 		> * {
-			position: relative;  
+			position: relative;
 			transform: translateY(100%);
 		}
 	}
-	
+
 	.swiper-slide-active {
 		.swiper-slide-text {
 			> * {
 				transform: translateY(0);
 				transition: .5s .3s;
 			}
-		} 
+		}
 	}
 }
 
@@ -1045,7 +1045,7 @@ button.swiper-pagination-bullet {
 		.swiper-pagination-outer {
 			bottom: 90px;
 		}
-	} 
+	}
 }
 
 
@@ -1073,12 +1073,12 @@ button.swiper-pagination-bullet {
 }
 
 
-// 
+//
 // Swiper Slider Tiny
 //
 .swiper-slider-tiny {
 	min-height: 400px;
-	
+
 	.swiper-slide {
 		position: relative;
 		&::before {
@@ -1091,7 +1091,7 @@ button.swiper-pagination-bullet {
 			pointer-events: none;
 			background: linear-gradient(to top, rgba($white, .3) 0%, rgba($white, 0) 40%);
 		}
-		
+
 		> * {
 			position: relative;
 			z-index: 1;
@@ -1102,7 +1102,7 @@ button.swiper-pagination-bullet {
 @include media-breakpoint-up(md) {
   .swiper-slider-tiny {
 		min-height: (760 / 1920) * 100vw;
-	} 
+	}
 }
 
 @include media-breakpoint-up(lg) {
@@ -1110,5 +1110,15 @@ button.swiper-pagination-bullet {
 		.swiper-pagination-outer {
 			bottom: 65px;
 		}
-	} 
+	}
+}
+
+
+//
+// Home Swiper Slides
+//
+@for $i from 1 through 3 {
+  .home--swiper-slide-bg-#{$i} {
+    background-image: url(/assets/images/swiper-image-#{$i}-960x776.jpg);
+  }
 }
