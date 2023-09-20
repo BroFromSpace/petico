@@ -15,11 +15,11 @@ const BreadcrumbContainer: FunctionalComponent<{}, {}, Slots> = (
 				<div class="breadcrumbs-custom-container container">
 					<div class="breadcrumbs-custom-main">
 						<h1 class="breadcrumbs-custom-title">
-						{ctx.slots.title ? ctx.slots.title() : null}
+							{ctx.slots.title ? ctx.slots.title() : null}
 						</h1>
 					</div>
 					<ul class="breadcrumbs-custom-path">
-					{ctx.slots.path ? ctx.slots.path() : null}
+						{ctx.slots.path ? ctx.slots.path() : null}
 					</ul>
 				</div>
 			</div>
