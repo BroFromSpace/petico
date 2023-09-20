@@ -3,7 +3,6 @@
 		:modules="[SwiperPagination, SwiperEffectFade]"
 		:speed="600"
 		effect="fade"
-		ref="swiper"
 		:loop="false"
 		:autoplay="false"
 		:slides-per-view="1"
