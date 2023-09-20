@@ -25,7 +25,7 @@
 	}
 }
 
-// Object inline 
+// Object inline
 .object-inline {
 	white-space: nowrap;
 	> * {
@@ -34,8 +34,8 @@
 		vertical-align: top;
 		white-space: normal;
 	}
-	
-	&.wow span {
+
+	&.aos span {
 		display: inline-block;
 	}
 
@@ -44,7 +44,7 @@
 	}
 }
 
-.wow-outer {
+.aos-outer {
 	.object-inline span {
 		display: inline-block;
 	}
@@ -125,7 +125,7 @@
 @include media-breakpoint-down(sm) {
   .phone-frame {
 		display: none;
-	} 
+	}
 }
 
 

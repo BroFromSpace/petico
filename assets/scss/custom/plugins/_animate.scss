@@ -149,6 +149,15 @@ html:not(.lt-ie10) .not-animated {
 	animation-name: slideInDown;
 }
 
+[data-aos="slide-in-down"] {
+	transform: translate3d(0, -100%, 0);
+	visibility: visible;
+
+	&.aos-animate {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 //
 // SlideInUp Keyframes Animation
 //
@@ -167,7 +176,7 @@ html:not(.lt-ie10) .not-animated {
 	animation-name: slideInUp;
 }
 
-// 
+//
 // SlideInLeft Keyframes Animation
 //
 @keyframes slideInLeft {
@@ -183,6 +192,15 @@ html:not(.lt-ie10) .not-animated {
 
 .slideInLeft {
 	animation-name: slideInLeft;
+}
+
+[data-aos="slide-in-left"] {
+	transform: translate3d(-100%, 0, 0);
+	visibility: visible;
+
+	&.aos-animate {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 //
@@ -266,9 +284,9 @@ html:not(.lt-ie10) .not-animated {
 }
 
 //
-// Wow Outer
+// AOS Outer
 //
-.wow-outer {
+.aos-outer {
 	position: relative;
 	overflow: hidden;
 }
@@ -313,7 +331,7 @@ html:not(.lt-ie10) .not-animated {
 //
 // FadeInUpSmall Keyframes Animation
 //
-@keyframes fadeInUpSmall { 
+@keyframes fadeInUpSmall {
 	0% {
 		opacity: 0;
 		transform: translate3d(0, 20px, 0);
@@ -339,11 +357,11 @@ html:not(.lt-ie10) .not-animated {
 		transform: translate3d(0, -50%, 0);
 		visibility: visible;
 	}
-	
+
 	10% {
 		opacity: 1;
-	} 
-	 
+	}
+
 	100% {
 		transform: translate3d(0, 0, 0);
 	}
@@ -362,11 +380,11 @@ html:not(.lt-ie10) .not-animated {
 		transform: translate3d(0, 50%, 0);
 		visibility: visible;
 	}
-	
+
 	10% {
 		opacity: 1;
-	} 
-	 
+	}
+
 	100% {
 		transform: translate3d(0, 0, 0);
 	}
@@ -377,6 +395,6 @@ html:not(.lt-ie10) .not-animated {
 }
 
 
-.wow {
+.aos {
 	backface-visibility: hidden;
 }
