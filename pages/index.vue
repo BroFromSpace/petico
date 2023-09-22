@@ -3,6 +3,10 @@
 		<HomeSwiper />
 
 		<HomeAboutUs />
+
+		<HomeFeatures />
+
+		<HomeServices />
 	</div>
 </template>
 
