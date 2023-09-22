@@ -13,13 +13,17 @@
 						<span class="aos" data-aos="slide-in-down">A Few Words About Us</span>
 					</h3>
 					<p class="aos-outer">
-						<span class="aos" data-aos="slide-in-down" data-aos-delay="500">SpaDog is a pet salon established in 1999 with the main goal of giving your pets the full furry body treatment so that they can look their very best every day.</span>
+						<span class="aos" data-aos="slide-in-down" data-aos-duration="500">SpaDog is a pet salon established in 1999 with the main goal of giving your pets the full furry body treatment so that they can look their very best every day.</span>
 					</p>
 					<p class="aos-outer">
-						<span class="aos" data-aos="slide-in-down" data-aos-delay="1000">Our salon offers a complete line of fine grooming services to bring out the best of appearance and personality in your pet. Our groomers work carefully, never rush, and do not overbook appointments.</span>
+						<span class="aos" data-aos="slide-in-down" data-aos-duration="1000">Our salon offers a complete line of fine grooming services to bring out the best of appearance and personality in your pet. Our groomers work carefully, never rush, and do not overbook appointments.</span>
 					</p>
 					<div class="aos-outer button-outer">
-						<a class="button button-lg button-primary button-winona" data-aos-delay="1000" href="about-us.html">Learn more</a>
+						<a class="button button-lg button-primary button-winona" data-aos-duration="1000" href="about-us.html">
+							<WinonaContent>
+								Learn more
+							</WinonaContent>
+						</a>
 					</div>
 				</div>
 				<div class="col-md-10 col-lg-6 aos-outer">
