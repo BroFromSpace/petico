@@ -3,22 +3,6 @@
 * Swiper
 */
 
-.swiper-container {
-	position: relative;
-	display: flex;
-	margin: 0 auto;
-	overflow: hidden;
-	list-style: none;
-	padding: 0;
-	/* Fix of Webkit flickering */
-	z-index: 1;
-	pointer-events: none;
-
-	&, * {
-		backface-visibility: hidden;
-
-	}
-}
 .swiper-container-no-flexbox .swiper-slide {
 	float: left;
 }
@@ -388,7 +372,7 @@ button.swiper-pagination-bullet {
 	}
 }
 /* a11y */
-.swiper-container .swiper-notification {
+.swiper-notification {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -697,6 +681,59 @@ button.swiper-pagination-bullet {
 	}
 }
 
+.swiper-pagination-simple {
+	margin-top: 30px;
+
+	&.disabled {
+		display: none !important;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-top: 40px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		margin-top: 50px;
+	}
+
+	.swiper-pagination-bullet {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		vertical-align: middle;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		margin-left: 14px;
+		margin-right: 14px;
+		text-align: center;
+		outline: none;
+		cursor: pointer;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			transform: scale3d(.56, .56, .56);
+			background: $gray-200;
+			border-radius: inherit;
+			transition: .2s;
+		}
+
+		&:only-child { display: none; }
+
+		&:hover,
+		&.swiper-pagination-bullet-active {
+			&::before {
+				transform: scale3d(1, 1, 1);
+				background-color: $primary;
+			}
+		}
+	}
+}
+
 %context-dark {
 	.swiper-pagination .swiper-pagination-bullet {
 		color: $white;
@@ -710,6 +747,7 @@ button.swiper-pagination-bullet {
 	position: relative;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	flex-shrink: 0;
 	width: 100%;
 	height: 100%;
