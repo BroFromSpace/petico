@@ -1,9 +1,9 @@
 <template>
 	<Swiper
 		:modules="[SwiperPagination, SwiperEffectFade]"
-		:speed="600"
 		effect="fade"
 		:loop="false"
+		:speed="600"
 		:autoplay="false"
 		:slides-per-view="1"
 		:simulate-touch="false"
@@ -17,7 +17,7 @@
 		:fade-effect="{
 			crossFade: true,
 		}"
-		class="swiper-container swiper-slider swiper-slider-light bg-image-1"
+		class="swiper-slider swiper-slider-light bg-image-1"
 		data-custom-slide-effect="inter-leave-effect"
 	>
 		<SwiperSlide>
