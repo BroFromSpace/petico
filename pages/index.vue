@@ -7,6 +7,8 @@
 		<HomeFeatures />
 
 		<HomeServices />
+
+		<HomeTestimonials />
 	</div>
 </template>
 
