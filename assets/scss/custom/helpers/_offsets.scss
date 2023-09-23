@@ -22,7 +22,7 @@ h4 + .p, .heading-4 + .p {
 
 * + h1,
 * + .heading-1 {
-	margin-top: 15px; 
+	margin-top: 15px;
 }
 
 h3 + h1, h3 + .heading-1,
@@ -78,7 +78,7 @@ p + hr { margin-top: 35px; }
 * + .row { margin-top: 30px; }
 * + .big { margin-top: 20px; }
 * + .text-block { margin-top: 25px; }
-* + .button, 
+* + .button,
 * + .button-outer { margin-top: 30px; }
 * + .list-sm { margin-top: 25px; }
 * + form.form-inline { margin-top: 18px; }
@@ -92,7 +92,7 @@ html .page * + .offset-top-5 { margin-top: 40px; }
 
 // Classes + Tags
 h3 + .row, .heading-3 + .row,
-h3 + .owl-carousel, .heading-3 + .owl-carousel {
+h3 + .swiper, .heading-3 + .swiper {
 	margin-top: 45px;
 }
 
@@ -110,7 +110,7 @@ h3 + .owl-carousel, .heading-3 + .owl-carousel {
 @include media-breakpoint-up(md) {
 	* + p,
 	* + .list-inline-comma {
-		margin-top: 20px; 
+		margin-top: 20px;
 	}
 	* + .big { margin-top: 25px; }
 	* + .button,
@@ -138,12 +138,12 @@ h3 + .owl-carousel, .heading-3 + .owl-carousel {
 	h3 + .p, .heading-3 + .p {
 		margin-top: 24px;
 	}
-	
+
 	h3 + .row, .heading-3 + .row,
-	h3 + .owl-carousel, .heading-3 + .owl-carousel {
+	h3 + .swiper, .heading-3 + .swiper {
 		margin-top: 55px;
 	}
-	
+
 	html * + .offset-top-1 { margin-top: 60px; }
 	html * + .offset-top-3 { margin-top: 30px; }
 	html * + .offset-top-4 { margin-top: 24px; }
@@ -155,7 +155,7 @@ h3 + .owl-carousel, .heading-3 + .owl-carousel {
 
 // Media offsets
 @include media-breakpoint-up(xl) {
-	* + .button, 
+	* + .button,
 	* + .button-outer { margin-top: 40px; }
 	* + .rd-form { margin-top: 40px; }
 
@@ -175,18 +175,18 @@ h3 + .owl-carousel, .heading-3 + .owl-carousel {
 
 @include media-breakpoint-up(xxl) {
 	h3 + .row, .heading-3 + .row,
-	h3 + .owl-carousel, .heading-3 + .owl-carousel {
+	h3 + .swiper, .heading-3 + .swiper {
 		margin-top: 75px;
 	}
-	
+
 	html * + .offset-top-1 { margin-top: 144px; }
 	html * + .offset-top-2 { margin-top: 75px; }
 
 	.row + .button-lg { margin-top: 70px; }
-} 
+}
 
 // Range spacing
-.row-0 { 
+.row-0 {
 	@include grid-offset(0px);
 }
 
@@ -228,7 +228,7 @@ h3 + .owl-carousel, .heading-3 + .owl-carousel {
 @include media-breakpoint-up(md) {
 	.row-md-50 {
 		@include grid-offset(50px);
-	} 
+	}
 }
 
 @include media-breakpoint-up(lg) {
@@ -240,7 +240,7 @@ h3 + .owl-carousel, .heading-3 + .owl-carousel {
 @include media-breakpoint-up(xxl) {
   .row-xxl-70 {
 		@include grid-offset(70px);
-	} 
+	}
 }
 
 
